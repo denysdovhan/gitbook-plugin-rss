@@ -6,6 +6,49 @@
   "engines": {
     "gitbook": ">=2.5.0"
   },
+  "gitbook": {
+    "properties": {
+      "title": {
+        "type": "string",
+        "required": true,
+        "description": "Title of your site or feed"
+      },
+      "description": {
+        "type": "string",
+        "description": "A short description of the feed."
+      },
+      "generator": {
+        "type": "string",
+        "description": "Feed generator."
+      },
+      "feed_url": {
+        "type": "string",
+        "required": true,
+        "description": "Url to the rss feed."
+      },
+      "site_url": {
+        "type": "string",
+        "required": true,
+        "description": "Url to the site that the feed is for."
+      },
+      "image_url": {
+        "type": "string",
+        "description": "Small image for feed readers to use."
+      },
+      "managingEditor": {
+        "type": "string",
+        "description": "Who manages content in this feed."
+      },
+      "webMaster": {
+        "type": "string",
+        "description": "Who manages feed availability and technical support."
+      },
+      "categories": {
+        "type": "array",
+        "description": "One or more categories this feed belongs to."
+      }
+    }
+  },
   "scripts": {
     "watch": "npm run transpile -- --watch",
     "transpile": "babel index.js --out-file index.es5.js",
@@ -35,5 +78,10 @@
     "babel-preset-es2015": "^6.3.13",
     "npm-run-all": "*",
     "rimraf": "*"
+  },
+  "dependencies": {
+    "get-md-desc": "^1.0.2",
+    "get-md-title": "^1.0.4",
+    "rss": "^1.2.1"
   }
 }
