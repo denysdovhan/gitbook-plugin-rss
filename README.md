@@ -1,7 +1,6 @@
 # gitbook-plugin-rss
 
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
 [![Dependency Status][depstat-image]][depstat-url]
 
 > RSS for your gitbook
@@ -60,9 +59,6 @@ MIT © [Denys Dovhan](http://denysdovhan.com)
 
 [npm-url]: https://npmjs.org/package/gitbook-plugin-rss
 [npm-image]: https://img.shields.io/npm/v/gitbook-plugin-rss.svg?style=flat-square
-
-[travis-url]: https://travis-ci.org/denysdovhan/gitbook-plugin-rss
-[travis-image]: https://img.shields.io/travis/denysdovhan/gitbook-plugin-rss.svg?style=flat-square
 
 [depstat-url]: https://david-dm.org/denysdovhan/gitbook-plugin-rss
 [depstat-image]: https://david-dm.org/denysdovhan/gitbook-plugin-rss.svg?style=flat-square
