@@ -41,6 +41,14 @@
       "categories": {
         "type": "array",
         "description": "One or more categories this feed belongs to."
+      },
+      "copyright": {
+        "type": "string",
+        "description": "Copyright information for this feed."
+      },
+      "language": {
+        "type": "string",
+        "description": "The language of the content of this feed."
       }
     }
   },
