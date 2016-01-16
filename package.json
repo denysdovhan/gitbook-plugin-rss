@@ -11,7 +11,7 @@
       "title": {
         "type": "string",
         "required": true,
-        "description": "Title of your site or feed"
+        "description": "Title of your site or feed."
       },
       "description": {
         "type": "string",
@@ -20,11 +20,6 @@
       "generator": {
         "type": "string",
         "description": "Feed generator."
-      },
-      "feed_url": {
-        "type": "string",
-        "required": true,
-        "description": "Url to the rss feed."
       },
       "site_url": {
         "type": "string",
