@@ -2,7 +2,8 @@ import title from 'get-md-title';
 import desc  from 'get-md-desc';
 import RSS   from 'rss';
 import { writeFileSync as write } from 'fs';
-import { resolve } from 'path';
+import { resolve, basename }      from 'path';
+import { parse }                  from 'url';
 
 // Define variables
 let site, feed;
@@ -41,7 +42,8 @@ export default {
     // Generate XML and write to file
     'finish': function () {
       const xml = feed.xml({ indent: true });
-      write(resolve(this.options.output, 'rss.xml'), xml, 'utf-8');
+      const feedpath = basename(parse(site.feed_url).pathname);
+      write(resolve(this.options.output, feedpath), xml, 'utf-8');
     }
   }
 };

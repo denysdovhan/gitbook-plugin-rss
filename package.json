@@ -26,6 +26,11 @@
         "required": true,
         "description": "Url to the site that the feed is for."
       },
+      "feed_url": {
+        "type": "string",
+        "required": true,
+        "description": "Url to the rss feed."
+      },
       "image_url": {
         "type": "string",
         "description": "Small image for feed readers to use."

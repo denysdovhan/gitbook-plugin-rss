@@ -44,6 +44,7 @@ Add it to your `book.json` with a basic configuration:
 
 * `title` (_required_ **string**) — Title of your site or feed
 * `site_url` (_required_ **url string**) — Url to the site that the feed is for.
+* `feed_url` (_required_ **url string**) — Url to the rss feed.
 * `description` (_optional_ **string**) — A short description of the feed.
 * `generator` (_optional_  **string**) — Feed generator.
 * `image_url` (_optional_  **url string**) — Small image for feed readers to use.
