@@ -11,10 +11,7 @@ let site, feed;
 export default {
   website: {
     assets: './assets',
-    js: [ 'plugin.js' ],
-    html: {
-      'head:end': () => `<link href="${site.feed_url}" title="${site.title}" rel="alternate"type="application/rss+xml">`
-    }
+    js: [ 'plugin.js' ]
   },
 
   hooks: {
