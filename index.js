@@ -43,7 +43,7 @@ export default {
     'finish': function () {
       const xml = feed.xml({ indent: true });
       const feedpath = basename(parse(site.feed_url).pathname);
-      write(resolve(this.options.output, feedpath), xml, 'utf-8');
+      return this.output.writeFile(site.feed_url, xml);
     }
   }
 };
