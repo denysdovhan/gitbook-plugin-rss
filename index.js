@@ -17,7 +17,7 @@ export default {
   hooks: {
     // Get and init RSS configuration
     'init': function () {
-      site = this.config.options.pluginsConfig.rss;
+      site = this.config.get('pluginsConfig.rss');
       feed = new RSS(site);
     },
 
