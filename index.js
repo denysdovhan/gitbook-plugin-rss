@@ -29,10 +29,13 @@ export default {
         ? ''
         : page.path.replace(/.md$/,'.html'));
 
+      const pageTitle = title(page.content);
+      const pageDescription = desc(page.content);
+
       feed.item({
-        title: title(page.content).text,
-        description: desc(page.content).text,
-        url,
+        title: pageTitle? pageTitle.text : '',
+        description: pageDescription? pageDescription.text : '',
+        url: url,
         author: site.author
       });
 
