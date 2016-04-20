@@ -22,7 +22,7 @@ export default {
     },
 
     // Collect all pages
-    'page': function (page) {
+    'page:before': function (page) {
       // If README.md, then change it to root
       const url = site.site_url +
         ( page.path === 'README.md'
