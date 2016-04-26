@@ -11,31 +11,31 @@ let site, feed;
 export default {
   website: {
     assets: './assets',
-    js: [ 'plugin.js' ],
-    html: {
-      'head:end': () => `<link href="${site.feed_url}" title="${site.title}" rel="alternate"type="application/rss+xml">`
-    }
+    js: [ 'plugin.js' ]
   },
 
   hooks: {
     // Get and init RSS configuration
     'init': function () {
-      site = this.config.options.pluginsConfig.rss;
+      site = this.config.get('pluginsConfig.rss');
       feed = new RSS(site);
     },
 
     // Collect all pages
-    'page': function (page) {
+    'page:before': function (page) {
       // If README.md, then change it to root
       const url = site.site_url +
         ( page.path === 'README.md'
         ? ''
         : page.path.replace(/.md$/,'.html'));
 
+      const pageTitle = title(page.content);
+      const pageDescription = desc(page.content);
+
       feed.item({
-        title: title(page.content).text,
-        description: desc(page.content).text,
-        url,
+        title: pageTitle? pageTitle.text : '',
+        description: pageDescription? pageDescription.text : '',
+        url: url,
         author: site.author
       });
 
@@ -46,7 +46,7 @@ export default {
     'finish': function () {
       const xml = feed.xml({ indent: true });
       const feedpath = basename(parse(site.feed_url).pathname);
-      write(resolve(this.options.output, feedpath), xml, 'utf-8');
+      return this.output.writeFile(site.feed_url, xml);
     }
   }
 };
