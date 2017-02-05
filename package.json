@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-rss",
-  "version": "2.1.5",
+  "version": "3.0.0",
   "description": "RSS for your gitbook",
   "main": "index.js",
   "engines": {
