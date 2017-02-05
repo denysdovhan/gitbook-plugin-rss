@@ -92,6 +92,6 @@
   "dependencies": {
     "get-md-desc": "^1.0.2",
     "get-md-title": "^1.0.4",
-    "rss": "^1.2.1"
+    "rss": "^1.2.2"
   }
 }
