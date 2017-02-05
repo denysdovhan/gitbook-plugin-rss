@@ -2,7 +2,7 @@
   "name": "gitbook-plugin-rss",
   "version": "2.1.5",
   "description": "RSS for your gitbook",
-  "main": "index.es5.js",
+  "main": "index.js",
   "engines": {
     "gitbook": ">=2.5.0"
   },
@@ -58,12 +58,7 @@
     }
   },
   "scripts": {
-    "watch": "npm run transpile -- --watch",
-    "transpile": "babel index.js --out-file index.es5.js",
-    "prepublish": "npm run transpile",
-    "clean": "rimraf index.es5.js",
-    "push": "git push --follow-tags",
-    "postpublish": "npm-run-all clean push"
+    "postpublish": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -80,15 +75,6 @@
     "url": "https://github.com/denysdovhan/gitbook-plugin-rss/issues"
   },
   "homepage": "https://github.com/denysdovhan/gitbook-plugin-rss#readme",
-  "devDependencies": {
-    "babel-cli": "^6.16.0",
-    "babel-core": "^6.14.0",
-    "babel-eslint": "^7.0.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-es2015": "^6.16.0",
-    "npm-run-all": "4.0.1",
-    "rimraf": "*"
-  },
   "dependencies": {
     "get-md-desc": "^1.0.2",
     "get-md-title": "^1.0.4",
