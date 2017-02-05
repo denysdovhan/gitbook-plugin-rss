@@ -4,7 +4,8 @@
   "description": "RSS for your gitbook",
   "main": "index.js",
   "engines": {
-    "gitbook": ">=2.5.0"
+    "node": ">=4",
+    "gitbook": ">=3.2.0"
   },
   "gitbook": {
     "properties": {
