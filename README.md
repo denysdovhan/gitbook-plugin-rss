@@ -1,5 +1,7 @@
 # gitbook-plugin-rss
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/denysdovhan/gitbook-plugin-rss.svg)](https://greenkeeper.io/)
+
 [![NPM version][npm-image]][npm-url]
 [![Dependency Status][depstat-image]][depstat-url]
 
