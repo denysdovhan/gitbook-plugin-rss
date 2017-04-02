@@ -1,3 +1,5 @@
+'use strict';
+
 const title = require('get-md-title');
 const desc  = require('get-md-desc');
 const RSS   = require('rss');
