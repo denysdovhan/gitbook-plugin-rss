@@ -1,9 +1,9 @@
 const title = require('get-md-title');
 const desc  = require('get-md-desc');
 const RSS   = require('rss');
-const { writeFileSync: write } = require('fs');
-const { resolve, basename } = require('path');
-const { parse } = require('url');
+const write = require('fs').writeFileSync;
+const path = require('path');
+const parse = require('url').parse;
 
 // Define variables
 let site, feed;
@@ -45,8 +45,8 @@ module.exports = {
     // Generate XML and write to file
     finish() {
       const xml = feed.xml({ indent: true });
-      const feedpath = basename(parse(site.feed_url).pathname);
-      return write(resolve(this.options.output, feedpath), xml, 'utf-8');
+      const feedpath = path.basename(parse(site.feed_url).pathname);
+      return write(path.resolve(this.options.output, feedpath), xml, 'utf-8');
     },
   }
 };
